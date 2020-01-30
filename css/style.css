@@ -1,11 +1,7 @@
-html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 body {
   margin: 0;
   padding: 0;
+  font-family: Raleway;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,10 +12,49 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fff;
+  background-color: #333;
 }
 
 .container {
+  width: 1100px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .card {
+  position: relative;
+}
+
+.container .card:hover .card-header {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  background-color: #40E0D0;
+}
+
+.container .card:hover .card-header h1 {
+  opacity: 1;
+}
+
+.container .card:hover .card-content {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.container .card .section {
+  height: 200px;
+  width: 300px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container .card .card-header {
+  position: relative;
+  background-color: #333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,18 +64,49 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 1;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
 }
 
-.card {
-  background-color: #333;
+.container .card .card-header h1 {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.container .card .card-content {
+  position: relative;
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 200px;
   padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  -webkit-box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.container .card .card-content button {
+  background: none;
+  border: 1px solid #333;
+  height: 50px;
+}
+
+.container .card .card-content button a {
+  text-decoration: none;
+  color: #333;
 }
 /*# sourceMappingURL=style.css.map */
